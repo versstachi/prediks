@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="lookport" content="width=device-width, initial-scale=1.0">
+    <title>Prediks</title> 
+    <link rel="stylesheet" href="css/main.css" /> 
+  </head>
+  <body class="requests">
+    <!-- svg icons -->
+    <div w3-include-html="svg-list.html"></div>
+    <!-- svg icons -->
+
+    <!-- sidebar container -->
+    <div id="sidebar"  class="dashboard_sidebar_wrap">
+
+      <div class="sidebar_top_menu">
+        <div class="logo"><img src="img/logo_predix.png" alt=""></div>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item active sidebar_menu_dashboard">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_home" />
+              </svg>
+              <span>Dashboard <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_reports" />
+              </svg>
+              <span>Reports & Invoices</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="/assets_view.html" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="12" height="16">
+                  <use xlink:href="#sidebar_menu_assets" />
+              </svg>
+              <span>Assets</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="/requests.html" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_request" />
+              </svg>
+              <span>Requests <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="14">
+                  <use xlink:href="#sidebar_menu_alarm" />
+              </svg>
+              <span>Alarms & Warnings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_trends" />
+              </svg>
+              <span>Trends & Forecast</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar_bottom_menu">
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="11" height="16">
+                  <use xlink:href="#sidebar_menu_help" />
+              </svg>
+              <span>Help</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_contacts" />
+              </svg>
+              <span>Contact us</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_settings" />
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_logout" />
+              </svg>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar_copyrighnts">© 2021 PredIKS. All rights reserved.</div>
+      </div>
+    </div>
+    <!-- sidebar container -->
+
+
+    <!-- dashboard content container -->
+    <div class="dashboard_content_wrap">
+
+      <div class="dashboard_head_panel">
+        <div class="dashboard_head_title"> 
+          <svg class="sidebar_top_menu_svg" width="10" height="10">
+              <use xlink:href="#left_arrow_icon" />
+          </svg>
+          Home  /  Assets  /  Yeletski
+        </div>
+        <div class="dashboard_head_user_wrap">
+          <div class="dashboard_head_notification">
+            <a href="">
+              <svg class="sidebar_top_menu_svg" width="20" height="24">
+                  <use xlink:href="#notification_ico" />
+              </svg>
+              <div class="dashboard_head_notification_count">1</div>
+            </a>
+          </div>
+          <div class="dashboard_head_user_menu">
+            <div class="dashboard_user_avatar">
+              <img src="img/dashboard_user_avatar.png" alt="">
+            </div>
+            <div class="dashboard_user_name">Konstantin Karpov</div>
+            <span class="dashboard_user_menu_arrow">
+              <svg class="dashboard_user_menu_arrow_svg" width="6" height="3">
+                  <use xlink:href="#menu_triangle" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="requests_nav">
+        <div class="requests_nav_left">
+          <div class="requests_assets_info">Assets <span>(4)</span></div>
+          <div class="requests_nav_search">
+            <form action="" class="requests_nav_search_form">
+              <div class="input_search">
+                <input type="text" placeholder="Search">
+                <svg class="search_icon" width="12" height="13">
+                    <use xlink:href="#search_icon" />
+                </svg>
+              </div>
+              <button type="submit" class="search_button">Filter</button>
+            </form>
+          </div>
+        </div>
+        <div class="requests_nav_add_new">
+          <button href="" class="green_link" id="add_new_asset">+ Add new asset</button>
+        </div>
+      </div>
+
+      <div class="requests_assets_list">
+        <div class="requests_assets_tab">
+           <table>
+            <tr>
+              <th> <input type="checkbox" onclick='selects()' id="allselect"/>  </th>
+              <th>Ref</th>
+              <th>status</th>
+              <th>Date</th>
+              <th>type</th>
+              <th>Asset</th>
+              <th>Name</th> 
+              <th></th>
+            </tr>
+            <tr>
+              <td>
+                <label for="request_1">
+                  <input type="checkbox" id="request_1" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>  
+            <tr>
+              <td>
+                <label for="request_2">
+                  <input type="checkbox" id="request_2" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="request_3">
+                  <input type="checkbox" id="request_3" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="request_4">
+                  <input type="checkbox" id="request_4" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+              <td>
+                <label for="request_5">
+                  <input type="checkbox" id="request_5" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="request_6">
+                  <input type="checkbox" id="request_6" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="assets_view_pagination">
+        <div class="assets_pagination_arrow_prev">
+          <img src="img/pagination_arrow_prev.png" alt="">
+        </div>
+        <ul>
+          <li class="active"><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a href="">...</a></li>
+          <li><a href="">25</a></li>
+        </ul>
+        <div class="assets_pagination_arrow_next">
+          <img src="img/pagination_arrow_next.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- content container -->
+
+    <!-- The Modal -->
+    <div id="add_new_asset_modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal_close"><img src="img/modal_close.svg" alt=""></span>
+        <div class="modal-header">
+          <div class="modal-header-title">Add new request</div>
+        </div>
+        <form action="">
+        <div class="modal-body"> 
+          <div class="form"> 
+              <div class="form_input">
+                <label class="form_input_label" for="serial_number_role"><span class="form_input_label_text">Name*</span>
+                <input id="form_login" type="text" name="form_login" placeholder="Sergei">
+                </label>
+              </div>
+            <div class="form_input">
+              <label class="form_input_label" for="rRequest_type_name"><span class="form_input_label_text">Request type*</span> 
+                <select name="rRequest_type_name"  id="rRequest_type_name" >
+                  <option disabled>Maintenance</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Maintenance">Maintenance</option>
+               </select>
+              </label>
+            </div>
+            <div class="form_input">
+              <label class="form_input_label" for="asset_name"><span class="form_input_label_text">Asset*</span> 
+                <select name="asset_name"  id="asset_name" >
+                  <option disabled>Choose asset</option>
+                  <option value="asset">asset</option>
+                  <option value="asset">asset</option>
+                  <option value="asset">asset</option>
+               </select>
+              </label>
+            </div> 
+            <div class="form_input">
+              <label class="form_input_label" for="serial_number_role"><span class="form_input_label_text">Description</span>
+              <textarea id="Description_name" type="text" name="Description_name" placeholder="Description" cols="30" rows="10"></textarea>
+              </label>
+            </div> 
+            <div class="form_input">
+              <label class="form_input_label" for="asset_name"><span class="form_input_label_text">Priority*</span> 
+                <select name="asset_name"  id="asset_name" >
+                  <option disabled>Choose Priority</option>
+                  <option value="Priority">Priority</option>
+                  <option value="Priority">Priority</option>
+                  <option value="Priority">Priority</option>
+               </select>
+              </label>
+            </div> 
+            <div class="form_input"> 
+                <label for="upload_photo" class="form_input_label"><span class="form_input_label_text">Files</span>
+                  <div class="upload_photo_input_wrap">
+                    <div class="upload_photo_input">
+                      <img src="img/Upload_photo.svg" alt="">
+                      Upload
+                      <input type="file" name="upload_photo" id="upload_photo" />
+                    </div>
+                  </div>
+                </label> 
+            </div> 
+            <div class="form_input">
+              <label class="form_input_label form_input_label_linked form_input_label_checkbox" for="serial_number_role"><span class="form_input_label_text">Linked</span> 
+                  <div class="form_input_checkbox">
+                    <label class="form_container">
+                      <input type="checkbox" checked="checked" name="notifications_name">
+                      <span>Reports & invoices</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">
+                      <input type="checkbox" name="notifications_name">
+                      <span>Requests</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">
+                      <input type="checkbox" name="notifications_name">
+                      <span>Alarms & warnings</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">
+                      <input type="checkbox" name="notifications_name">
+                      <span>Trends & forecast</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+                  </div> 
+              </label>
+            </div> 
+          </div>
+        </div>
+        <div class="modal-footer">
+              <div class="form_input"><span type="submit" class="form_button modal_footer_close transparent_button">Cancel</span></div> 
+              <div class="form_input"><button type="submit" class="form_button green_link">Create new request</button></div> 
+        </div>
+            </form>
+      </div>
+
+    </div>
+    <!-- scripts -->
+    <script src="js/custom.js"></script> 
+    <!-- scripts -->
+  </body>
+</html>
